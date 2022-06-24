@@ -1,0 +1,124 @@
+---
+title: "STA130H1S -- Fall 2022"
+subtitle: Week 6 Tutorial Handout
+output: pdf_document
+---
+
+#### Today's agenda (5 min):  
+
+- Q&A/vocabulary list
+
+- Group Discussion
+
+- Writing prompt
+
+#### This Week's Vocab (15-20 min) :  
+
+- Parameter
+- Statistic
+- Population
+- Sample
+- Sampling distribution
+- Random sampling
+- Resampling
+- Bootstrap
+- Percentile (quantile)
+- Confidence interval
+- Confidence level
+- Testing
+- Estimation
+- Representative
+- sample_n()
+
+#### Discussion (20 min) :  
+
+- What are the two main branches of statistical inference? Give an example of each and briefly describe how they are carried out.
+
+(testing & estimation)
+
+- Are the use of p-values and confidence intervals mutually exclusive? What do the two have in common? How do they differ? Think about under which circumstances you may want to use each of these. 
+
+(Both provide insight into statistical significance (e.g. $p < 0.05$ or $0 \notin CI$ , if interested in a difference – depends on what you are estimating). A p-value is the probability of obtaining an effect at least as extreme as the one in your sample data, assuming the truth of the null hypothesis.The purpose of CI is to obtain an estimate the parameter that reflects sampling variability. E.g. Wish to estimate the proportion of people living in Toronto who use the TTC, number of coffees people in this class drink each week, etc. Both are based on statistics and sampling distributions.)
+
+- Why are p values controversial? What are some good practices to make sure that p values are used as intended ?
+
+(The choice of a significance value $\alpha$ is arbitrary. Better to either simply comment
+on the strength of the evidence against $H_0$ by reporting the p-value, or at least make sure to choose a significance level,$\alpha$ , before calculating the p-value)
+
+- If we want to be more confident in correctly capturing the correct proportion of our outcome, such as the percent of couples who tilt their heads right when kissing, should we use a larger or smaller confidence interval? How do you think this relates to type I and/ or type II errors? 
+
+(A larger confidence level (e.g., instead of 95%, use 98%) would ensure that we capture the population parameter in more samples. This would give a wider confidence interval, extending to more of the bootstrap sampling distribution.
+
+The probability of committing a type I error (rejecting the null when it is actually true) is called $\alpha$; i.e., the level of statistical significance. For 99% CI, $\alpha$=0.01 (confidence level). This means that there is a 1% probability of making a type I error.)
+
+-	If you and your friend both applied the same bootstrap sampling method to the same data, do you expect that you both arrive at the same estimate and CI? What are some factors that you would need to consider (and hold constant) to ensure that you both arrived at the same answer? 
+
+(set the same seed (starting point for simulations), same number of repetitions, etc. Otherwise, as with any simulation, the results will be different every time. Need a large N to ensure estimates are stable.)
+
+\newpage
+
+#### Writing prompt (30 min) :  
+ 
+You are once again chatting on the phone to your friend. Your friend enjoyed your previous conversation about data visualization so much that your friend asked you if you had learned anything new in your STA130 course. You decided to tell them about the fancy new technique you just learned: bootstrapping! Be sure to include at least 2 vocabulary words from this week and explain them in simple terms for a lay audience.     
+ 
+ 
+***Bootstrapping is like shuffling up the roster on your favorite sports team to
+change thestarters every time you play so you can see the different possible 
+scores the team could make at the end of the first quarter (or third or half).  
+It's maybe not perfect analogy (because playing one sports game to the next is
+not really resampling exactly...); but, if you could do that you'd see how much 
+variability there can be in scores for your team.  This would give you a good
+idea of the uncertainty in scores you could expect from your team in the first 
+quarter (or third or half).  E.g., you could (kind of) build a "confidence 
+interval" by getting all the scores and then seeing, e.g., what the 2.5 and 97.5 
+percentile were, since the interval between these would be (kind of like) 95% of 
+all the things that could happen.***
+
+***<"wah-whaah-wah-wah">***
+
+***Oh, right, well, an "x" percentile of a distribution (or population) of some 
+thing you're measuring (e.g., scores in the first quarter, etc.) is the value
+such that if you randomly drew a sample from the distribution (or population), 
+there would be an "x" chance of seeing something less than or equal to that "x" 
+percentile of the distribution (or population). So, e.g., if the 10th percentile
+of scores in the first quarter (or third or half) was 10, then there would be a 
+10% chance of seeing a score of 10 or less.***
+
+***<"wah-whaah-wah-wah">***
+
+***Yeah, so, bootstrapping is a way to calculate the percentiles that characterize
+the uncertainty in a test statistic.  It's similar to simulating the sampling
+distribution of the test statistic that you would have if the null hypothesis 
+was true.  But rather than using it to calculate a p-value, we use the 
+percentiles to construct x% confidence intervals that have an x% of working,
+which means that they will contain the actually true parameter you're trying
+to estimate. Confidence intervals are nice because they give you both a general 
+sense of what your estimate is and how much uncertainty there is in the estimate
+(based on how wide the confidence interval is).***
+
+ 
+*Other things to consider:* 
+- Try to not spend more than 20 minutes on the prompt.     
+- Aim for more than 200 but less than 400 words.   
+- Remember to include a conclusion that reiterates the key points your friend should understand about bootstrapping.   
+- Use full sentences.    
+- Grammar is not the main focus of this assessment, but it is important that you communicate in a clear and professional manner (i.e., no slang or emojis should appear).  
+ 
+*Vocabulary* 
+ 
+- Parameter  
+- Statistic  
+- Population  
+- Sample  
+- Sampling distribution  
+- Random sampling  
+- Resampling  
+- Bootstrap  
+- Percentile (quantile)  
+- Confidence interval  
+- Confidence level  
+- Testing  
+- Estimation  
+- Representative 
+
+
